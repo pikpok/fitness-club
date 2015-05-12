@@ -1,0 +1,208 @@
+I, [2015-05-12T12:54:37.601693 #8394]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-05-12 12:54:37 +0200
+I, [2015-05-12T12:54:37.616304 #8394]  INFO -- : Processing by StaticPagesController#home as HTML
+I, [2015-05-12T12:54:37.665114 #8394]  INFO -- :   Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+I, [2015-05-12T12:54:37.678117 #8394]  INFO -- :   Rendered layouts/_navigation_links.html.erb (8.5ms)
+I, [2015-05-12T12:54:37.678268 #8394]  INFO -- :   Rendered layouts/_navigation.html.erb (10.3ms)
+I, [2015-05-12T12:54:37.680161 #8394]  INFO -- :   Rendered layouts/_messages.html.erb (1.0ms)
+I, [2015-05-12T12:54:37.680723 #8394]  INFO -- : Completed 200 OK in 64ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+I, [2015-05-12T12:54:37.721594 #8394]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-05-12 12:54:37 +0200
+F, [2015-05-12T12:54:37.723075 #8394] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/httpserver.rb:138:in `service'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/httpserver.rb:94:in `run'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-05-12T12:54:37.730871 #8394]  INFO -- : Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-05-12 12:54:37 +0200
+F, [2015-05-12T12:54:37.732975 #8394] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/httpserver.rb:138:in `service'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/httpserver.rb:94:in `run'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-05-12T12:54:46.934494 #8394]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-05-12 12:54:46 +0200
+I, [2015-05-12T12:54:46.935676 #8394]  INFO -- : Processing by StaticPagesController#home as HTML
+I, [2015-05-12T12:54:46.937787 #8394]  INFO -- :   Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+I, [2015-05-12T12:54:46.939845 #8394]  INFO -- :   Rendered layouts/_navigation_links.html.erb (0.8ms)
+I, [2015-05-12T12:54:46.939978 #8394]  INFO -- :   Rendered layouts/_navigation.html.erb (1.2ms)
+I, [2015-05-12T12:54:46.940276 #8394]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2015-05-12T12:54:46.940658 #8394]  INFO -- : Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+I, [2015-05-12T12:54:46.976766 #8394]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-05-12 12:54:46 +0200
+F, [2015-05-12T12:54:46.978045 #8394] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/httpserver.rb:138:in `service'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/httpserver.rb:94:in `run'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-05-12T12:54:46.982921 #8394]  INFO -- : Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-05-12 12:54:46 +0200
+F, [2015-05-12T12:54:46.984224 #8394] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/httpserver.rb:138:in `service'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/httpserver.rb:94:in `run'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-05-12T12:55:03.142558 #8394]  INFO -- : Started GET "/users/sign_in" for 127.0.0.1 at 2015-05-12 12:55:03 +0200
+I, [2015-05-12T12:55:03.145391 #8394]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-05-12T12:55:03.159252 #8394]  INFO -- : Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+F, [2015-05-12T12:55:03.162213 #8394] FATAL -- : 
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  activerecord (4.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:511:in `table_structure'
+  activerecord (4.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:385:in `columns'
+  activerecord (4.2.1) lib/active_record/connection_adapters/schema_cache.rb:43:in `columns'
+  activerecord (4.2.1) lib/active_record/attributes.rb:93:in `columns'
+  activerecord (4.2.1) lib/active_record/attributes.rb:98:in `columns_hash'
+  activerecord (4.2.1) lib/active_record/inheritance.rb:205:in `subclass_from_attributes?'
+  activerecord (4.2.1) lib/active_record/inheritance.rb:54:in `new'
+  devise (3.4.1) app/controllers/devise/sessions_controller.rb:9:in `new'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/httpserver.rb:138:in `service'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/httpserver.rb:94:in `run'
+  /home/pikpok/.rvm/rubies/ruby-head/lib/ruby/2.3.0/webrick/server.rb:294:in `block in start_thread'
+
+

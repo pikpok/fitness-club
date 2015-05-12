@@ -1,0 +1,52 @@
+<h1>Receptionist panel</h1>
+
+<p>
+  <%= link_to "New user", new_receptionist_user_path %>
+</p>
+
+<%= form_tag receptionist_users_path, method: 'get' do %>
+  <p>
+    <%= text_field_tag :first_name, params[:first_name], placeholder: "first_name" %>
+    <%= text_field_tag :last_name, params[:last_name], placeholder: "last name" %>
+    <%= text_field_tag :email, params[:email], placeholder: "email" %>
+    <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table class="table table-hover">
+  <thead>
+      <th>
+        Id
+      </th>
+  <th>
+    First name
+  </th>
+  <th>
+    Last name
+  </th>
+  <th>
+    Email
+  </th>
+  <th>
+    Subscription until
+  </th>
+  <th>
+   </th>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+      <tr>
+        <th scope="row"><%= user.id %></th>
+        <th><%= user.first_name %></th>
+        <th><%= user.last_name %></th>
+        <th><%= user.email %></th>
+        <th><%= user.subscription %></th>
+        <th>
+          <%= link_to "Edit", edit_receptionist_user_path(id: user.id) %>
+          <%= link_to "Delete", receptionist_user_path(id: user.id), data: { confirm: "Are you sure?" }, method: :delete %>
+        </th>
+      </tr>
+      </li>
+  <% end -%>
+  </tbody>
+</table>
+

@@ -6,7 +6,7 @@ class Receptionist::UsersController < ApplicationController
   has_scope :email
 	
 	def index
-    @users = apply_scopes(User).all
+    @users = apply_scopes(User).all.limit 100
   end
 	
 	def show

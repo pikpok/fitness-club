@@ -3,12 +3,12 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :subscription,
-          date: { after_or_equal_to: Proc.new { Date.today },
-                  before: Proc.new { Date.new(Date.today.year+4, Date.today.month, Date.today.day) },
+          date: { after_or_equal_to: Date.new(2015, 05, 14),
+                  before: Date.new(2100, 12, 31),
                   message: "date is not valid" }
 
   scope :first_name, -> (first_name) { where("first_name like ?", "%#{first_name}%") }

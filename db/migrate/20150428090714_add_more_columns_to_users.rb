@@ -3,6 +3,6 @@ class AddMoreColumnsToUsers < ActiveRecord::Migration
     add_column :users, :first_name, :string
     add_column :users, :last_name, :string
     add_column :users, :telephone, :string
-    add_column :users, :subscription, :date, default: Proc.new { Date.today }
+    add_column :users, :subscription, :date
   end
 end

@@ -5,7 +5,7 @@ class Receptionist::UsersController < ApplicationController
   has_scope :last_name
   has_scope :email
 	
-	def index
+  def index
     @users = apply_scopes(User).all.limit 100
   end
 	
@@ -19,7 +19,6 @@ class Receptionist::UsersController < ApplicationController
 	
 	def create
 	  @user = User.new(secure_params)
-	  @user.subscription = Date.tomorrow
 	  if @user.save
 	    redirect_to receptionist_users_path, notice: "User created"
 	  else

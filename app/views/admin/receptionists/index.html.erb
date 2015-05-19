@@ -1,0 +1,32 @@
+<h1>Admin panel</h1>
+
+<p>
+  <%= link_to "New receptionist", new_admin_receptionist_path %>
+</p>
+
+<table class="table table-hover">
+  <thead>
+      <th>
+        Id
+      </th>
+  <th>
+    Email
+  </th>
+  <th>
+   </th>
+  </thead>
+  <tbody>
+  <% @receptionists.each do |receptionist| %>
+      <tr>
+        <th scope="row"><%= receptionist.id %></th>
+        <th><%= receptionist.email %></th>
+        <th>
+          <%= link_to "Edit", edit_admin_receptionist_path(id: receptionist.id) %>
+          <%= link_to "Delete", admin_receptionist_path(id: receptionist.id), data: { confirm: "Are you sure?" }, method: :delete %>
+        </th>
+      </tr>
+      </li>
+  <% end -%>
+  </tbody>
+</table>
+

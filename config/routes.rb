@@ -8,9 +8,13 @@ Rails.application.routes.draw do
     resources :users
   end
 
+  namespace :admin do
+    resources :receptionists
+    resources :users
+  end
+
   devise_for :admins
   devise_for :receptionists
-  devise_for :users, controllers: { sessions: 'devise/sessions' }
   devise_for :users, controllers: { sessions: 'devise/sessions', :registrations => "users/registrations" }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

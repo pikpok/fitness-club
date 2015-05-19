@@ -1,0 +1,71 @@
+<h1>Admin panel</h1>
+
+<p>
+  <%= link_to "New user", new_admin_user_path %>
+</p>
+
+<%= form_tag admin_users_path, method: 'get' do %>
+<div class="row">
+  <div class="col-md-3">
+    <div class="input-group">
+      <%= text_field_tag :first_name, params[:first_name], placeholder: "first name", class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="input-group">
+      <%= text_field_tag :last_name, params[:last_name], placeholder: "last name", class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="input-group">
+      <%= text_field_tag :email, params[:email], placeholder: "email", class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <%= submit_tag "Filter", class: "btn btn-primary" %>
+  </div>
+</div>
+<% end %>
+
+<table class="table table-hover">
+  <thead>
+    <th>
+      Id
+    </th>
+    <th>
+      First name
+    </th>
+    <th>
+      Last name
+    </th>
+    <th>
+      Email
+    </th>
+    <th>
+      Subscription until
+    </th>
+    <th>
+      Actions
+    </th>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+      <tr>
+        <th scope="row"><%= user.id %></th>
+        <th><%= user.first_name %></th>
+        <th><%= user.last_name %></th>
+        <th><%= user.email %></th>
+        <th><%= user.subscription %></th>
+        <th>
+          <%= link_to "Edit", edit_admin_user_path(id: user.id) %>
+          <%= link_to "Delete", admin_user_path(id: user.id), data: { confirm: "Are you sure?" }, method: :delete %>
+        </th>
+      </tr>
+      </li>
+  <% end -%>
+  </tbody>
+</table>
+

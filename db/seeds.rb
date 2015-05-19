@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Admin.create(email: "admin@fitness.club", password: "adminpassword")
 Receptionist.create(email: "receptionist@fitness.club", password: "receptionistpassword")
-User.create(email: "user@fitness.club", first_name: "Test", last_name: "User", password: "userpassword")
+User.create(email: "user@fitness.club", first_name: "Test", last_name: "User", password: "userpassword", subscription: Date.new(2015, 5, 29))

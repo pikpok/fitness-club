@@ -2,7 +2,7 @@
   <li><%= link_to 'Dashboard', receptionist_dashboard_index_path %></li>
   <li><%= link_to 'Sign out', destroy_receptionist_session_path, :method=>'delete' %></li>
 <% elsif user_signed_in? %>
-  <li>Subscription <%= "not " if !current_user.is_subscription_active? %>active</li>
+  <li class="navbar-text">Subscription <%= "not " if !current_user.is_subscription_active? %>active</li>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
 <% else %>

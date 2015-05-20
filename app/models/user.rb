@@ -16,4 +16,8 @@ class User < ActiveRecord::Base
   def is_subscription_active?
     subscription >= Date.today
   end
+
+  def subscription_days_left
+    is_subscription_active? ? (subscription - Date.today).to_i : 0
+  end
 end

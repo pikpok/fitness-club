@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <div class="container">
+    <h2>Welcome, <%= current_user.first_name %>!</h2>
+    Your subscription is
+    <% if current_user.is_subscription_active? %>
+    avaiable for <%= @days_left %> more days
+    <% else %>
+    not avaiable.
+    <% end %>
+        
+  </div>
+</div>

@@ -22,6 +22,16 @@
     <%= f.date_field :subscription, placeholder: "YYYY-MM-DD" %>
   </div>
 
+  <div class="field">
+    <%= f.label "Password (optional)" %><br />
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>

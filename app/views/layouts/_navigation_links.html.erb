@@ -1,8 +1,17 @@
+<% if admin_signed_in? %>
+  <li><%= link_to 'Admin dashboard', admin_root_path %></li>
+  <li><%= link_to 'Sign out (admin)', destroy_admin_session_path, :method=>'delete' %></li>
+<% end %>
 <% if receptionist_signed_in? %>
-  <li><%= link_to 'Dashboard', receptionist_dashboard_index_path %></li>
-  <li><%= link_to 'Sign out', destroy_receptionist_session_path, :method=>'delete' %></li>
-<% elsif user_signed_in? %>
-  <li class="navbar-text">Subscription <%= "not " if !current_user.is_subscription_active? %>active</li>
+  <li><%= link_to 'Receptionist dashboard', receptionist_root_path %></li>
+  <li><%= link_to 'Sign out (receptionist)', destroy_receptionist_session_path, :method=>'delete' %></li>
+<% end %>
+<% if user_signed_in? %>
+  <li class="navbar-text">
+    Subscription <%= "not " if !current_user.is_subscription_active? %>active
+    <%= " (" + current_user.subscription_days_left.to_s + " days left)" if current_user.is_subscription_active? %>
+  </li>
+  <li><%= link_to 'Dashboard', users_root_path %></li>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
 <% else %>

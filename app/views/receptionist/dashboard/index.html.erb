@@ -1,6 +1,6 @@
 <div class="jumbotron">
   <div class="container">
     <h2>Welcome, <%= current_receptionist.email %>!</h2>
-    <p><%= link_to "Manage users", receptionist_users_path %></p>
+    <p><%= button_to "Manage users", receptionist_users_path, class: "btn btn-primary btn-lg" %></p>
   </div>
 </div>

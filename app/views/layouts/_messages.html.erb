@@ -1,4 +1,4 @@
-<% flash.each do |key, value| %>
+<% flash.delete(:timedout).each do |key, value| %>
   <div class="alert alert-<%= key == 'alert' ? 'danger' : 'success' %>">
     <a href="#" data-dismiss="alert" class="close">×</a>
       <ul>

@@ -1,3 +1,6 @@
-<h1>Receptionist panel</h1>
-
-<%= link_to "Manage users", receptionist_users_path %>
+<div class="jumbotron">
+  <div class="container">
+    <h2>Welcome, <%= current_receptionist.email %>!</h2>
+    <p><%= link_to "Manage users", receptionist_users_path %></p>
+  </div>
+</div>

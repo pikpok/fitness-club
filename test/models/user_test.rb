@@ -39,7 +39,7 @@ class UserTest < ActiveSupport::TestCase
   test "should not save user with invalid subscription" do
     user = User.new(email: "fooo@bb.ar", first_name: "Foo", last_name: "Barr", password: "foobar1234")
     assert_not user.save
-    user.subscription = Date.yesterday
+    user.subscription = Date.new(2014, 10, 12) # date past software creation date
     assert_not user.save
   end
 

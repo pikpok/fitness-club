@@ -1,6 +1,7 @@
 <div class="jumbotron">
   <div class="container">
     <h2>Welcome, <%= current_receptionist.email %>!</h2>
-    <p><%= button_to "Manage users", receptionist_users_path, class: "btn btn-primary btn-lg" %></p>
+    <p><%= button_to "Manage users", receptionist_users_path, method: :get, class: "btn btn-primary btn-lg" %></p>
+    <p><%= button_to "Change email/password", receptionist_edit_path, method: :get, class: "btn btn-primary btn-lg" %></p>
   </div>
 </div>

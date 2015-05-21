@@ -1,11 +1,8 @@
 <div class="jumbotron">
   <div class="container">
     <h2>Welcome, <%= current_admin.email %>!</h2>
-    <p>
-      <%= button_to "Manage users", admin_users_path, class: "btn btn-primary btn-lg" %>
-    </p>
-    <p>
-      <%= button_to "Manage receptionists", admin_receptionists_path, class: "btn btn-primary btn-lg" %>
-    </p>
+    <p><%= button_to "Manage users", admin_users_path, method: :get, class: "btn btn-primary btn-lg" %></p>
+    <p><%= button_to "Manage receptionists", admin_receptionists_path, method: :get, class: "btn btn-primary btn-lg" %></p>
+    <p><%= button_to "Change email/password", admin_edit_path, method: :get, class: "btn btn-primary btn-lg" %></p>
   </div>
 </div>

@@ -16,6 +16,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :subscription %><br />
+    <%= f.date_field :subscription, value: Date.today + 10.days %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>

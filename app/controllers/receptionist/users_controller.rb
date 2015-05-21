@@ -22,7 +22,7 @@ class Receptionist::UsersController < ApplicationController
 	  if @user.save
 	    redirect_to receptionist_users_path, notice: "User created"
 	  else
-	    redirect_to new_receptionist_user_path, alert: "#{@user.errors.full_messages}"
+	    redirect_to new_receptionist_user_path, alert: @user.errors.full_messages.to_sentence
 	  end
 	end
 	
@@ -39,7 +39,7 @@ class Receptionist::UsersController < ApplicationController
     if @user.update_attributes(secure_params)
       redirect_to receptionist_users_path, notice: "User updated."
     else
-      redirect_to receptionist_users_path, alert: "User cannot be updated - #{@user.errors.full_messages}"
+      redirect_to receptionist_users_path, alert: @user.errors.full_messages.to_sentence
     end
   end
 

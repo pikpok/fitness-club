@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   namespace :receptionist do
     root 'dashboard#index'
-    get 'dashboard/index'
+    get 'edit', to: 'dashboard#edit'
+    patch 'edit', to: 'dashboard#update'
     resources :users do
       collection do
         patch 'update_password'

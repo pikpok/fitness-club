@@ -19,7 +19,6 @@ class Admin::UsersController < ApplicationController
   
   def create
     @user = User.new(secure_params)
-    @user.subscription = Date.tomorrow
     if @user.save
       redirect_to admin_users_path, notice: "User created"
     else

@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'dashboard#index'
+    get 'edit', to: 'dashboard#edit'
+    patch 'edit', to: 'dashboard#update'
     resources :receptionists
     resources :users
   end

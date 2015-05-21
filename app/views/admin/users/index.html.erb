@@ -59,8 +59,8 @@
       <td><%= user.email %></td>
       <td><%= user.subscription %></td>
       <td class="vert-align">
-        <%= link_to "Edit", edit_receptionist_user_path(id: user.id), class: "btn btn-primary" %>
-        <%= link_to "Delete", receptionist_user_path(id: user.id), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary" %>
+        <%= link_to "Edit", edit_admin_user_path(id: user.id), class: "btn btn-primary" %>
+        <%= link_to "Delete", admin_user_path(id: user.id), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary" %>
       </td>
     </tr>
     <% end -%>

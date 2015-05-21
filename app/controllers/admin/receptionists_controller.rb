@@ -43,4 +43,4 @@ class Admin::ReceptionistsController < ApplicationController
       def secure_params
         params.require(:receptionist).permit(:email, :password, :password_confirmation)
       end
-  end
+end

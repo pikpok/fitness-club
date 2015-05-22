@@ -30,6 +30,8 @@ gem 'bootstrap-sass'
 gem 'has_scope'
 gem 'date_validator'
 
+gem 'coveralls', require: false
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

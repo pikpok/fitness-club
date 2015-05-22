@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class Admin::UsersControllerTest < ActionController::TestCase
+class Receptionist::UsersControllerTest < ActionController::TestCase
   setup do
-    sign_in admins(:one)
+    sign_in receptionists(:one)
     @user = users(:one)
   end
 
@@ -32,7 +32,7 @@ class Admin::UsersControllerTest < ActionController::TestCase
         password_confirmation: "testowehaslo"
       }
     end
-    assert_redirected_to admin_users_path, notice: "User created"
+    assert_redirected_to receptionist_users_path, notice: "User created"
   end
 
   test "should edit existing user" do
@@ -42,14 +42,14 @@ class Admin::UsersControllerTest < ActionController::TestCase
       email: "test@test.test",
       subscription: "2015-10-20"
     }
-    assert_redirected_to admin_users_path, notice: "User updated."
+    assert_redirected_to receptionist_users_path, notice: "User updated."
   end
 
   test "should destroy user" do
     assert_difference('User.count', -1) do
       delete :destroy, id: @user.id
     end
-    assert_redirected_to admin_users_path, notice: "User deleted."
+    assert_redirected_to receptionist_users_path, notice: "User deleted."
   end
 
 end

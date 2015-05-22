@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   
-  user = User.new(email: "fooo@bb.ar", first_name: "Foo", last_name: "Barr", password: "foobar1234", subscription: Date.tomorrow)
+  @user = User.new(email: "fooo@bb.ar", first_name: "Foo", last_name: "Barr", password: "foobar1234", subscription: Date.tomorrow)
 
   test "should save valid user" do
     user = User.new(email: "fooo@bb.ar", first_name: "Foo", last_name: "Barr", password: "foobar1234", subscription: Date.tomorrow)
@@ -43,5 +43,15 @@ class UserTest < ActiveSupport::TestCase
     assert_not user.save
   end
 
+  test "should return if subscription is active" do
+    user = User.new(email: "fooo@bb.ar", first_name: "Foo", last_name: "Barr", password: "foobar1234", subscription: Date.tomorrow)
+    assert user.is_subscription_active?
+    user.subscription = Date.yesterday
+    assert_not user.is_subscription_active?
+  end
 
+  test "should return valid number of days for subscription to end" do
+    user = User.new(email: "fooo@bb.ar", first_name: "Foo", last_name: "Barr", password: "foobar1234", subscription: Date.tomorrow + 5.days)
+    assert_equal 5, user.subscription_days_left
+  end
 end

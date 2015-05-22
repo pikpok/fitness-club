@@ -52,6 +52,6 @@ class UserTest < ActiveSupport::TestCase
 
   test "should return valid number of days for subscription to end" do
     user = User.new(email: "fooo@bb.ar", first_name: "Foo", last_name: "Barr", password: "foobar1234", subscription: Date.tomorrow + 5.days)
-    assert_equal 5, user.subscription_days_left
+    assert_equal 6, user.subscription_days_left
   end
 end

@@ -39,7 +39,7 @@ class Admin::UsersController < ApplicationController
     if @user.update_attributes(secure_params)
       redirect_to admin_users_path, notice: "User updated."
     else
-      redirect_to admin_users_path, alert: @user.errors.full_messages.to_sentence
+      redirect_to edit_admin_user_path(id: @user.id), alert: @user.errors.full_messages.to_sentence
     end
   end
 

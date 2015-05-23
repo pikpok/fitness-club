@@ -39,7 +39,7 @@ class Receptionist::UsersController < ApplicationController
     if @user.update_attributes(secure_params)
       redirect_to receptionist_users_path, notice: "User updated."
     else
-      redirect_to receptionist_users_path, alert: @user.errors.full_messages.to_sentence
+      redirect_to edit_receptionist_user_path(id: @user.id), alert: @user.errors.full_messages.to_sentence
     end
   end
 

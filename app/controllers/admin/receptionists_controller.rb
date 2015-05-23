@@ -25,7 +25,7 @@ class Admin::ReceptionistsController < ApplicationController
       if @receptionist.update_attributes(secure_params)
         redirect_to admin_receptionists_path, notice: "Receptionist updated"
       else
-        redirect_to edit_admin_receptionist_path, alert: @receptionist.errors.full_messages.to_sentence
+        redirect_to edit_admin_receptionist_path(id: @receptionist.id), alert: @receptionist.errors.full_messages.to_sentence
       end
     end
   

@@ -19,6 +19,6 @@ class Admin::DashboardController < ApplicationController
 
   private
     def secure_params
-      params.require(:admin).permit(:email, :password, :current_password)
+      params.require(:admin).permit(:email, :password, :password_confirmation, :current_password)
     end
 end

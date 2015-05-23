@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :telephone, presence: :true
   validates :subscription,
           date: { after_or_equal_to: Date.new(2015, 05, 14),
                   before: Date.new(2100, 12, 31),

@@ -16,6 +16,11 @@
     <%= f.label :email %><br />
     <%= f.email_field :email %>
   </div>
+
+  <div class="field">
+    <%= f.label "Phone number" %><br />
+    <%= telephone_field(:user, :telephone) %>
+  </div>
   
   <div class="field">
     <%= f.label :subscription %><br />

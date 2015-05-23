@@ -9,6 +9,7 @@ class Receptionist::UsersControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
+    assert assigns(:users)
   end
 
   test "should get new user page" do
@@ -27,7 +28,8 @@ class Receptionist::UsersControllerTest < ActionController::TestCase
         first_name: "Test",
         last_name: "Testowy",
         email: "test@test.test",
-        subscription: Date.today + 10.days,
+        telephone: "111222333",
+        subscription: "2015-10-20",
         password: "testowehaslo",
         password_confirmation: "testowehaslo"
       }

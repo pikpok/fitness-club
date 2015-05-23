@@ -43,6 +43,9 @@
       Email
     </th>
     <th>
+      Phone
+    </th>
+    <th>
       Subscription until
     </th>
     <th>
@@ -56,6 +59,7 @@
       <td><%= user.first_name %></td>
       <td><%= user.last_name %></td>
       <td><%= user.email %></td>
+      <td><%= user.telephone %></td>
       <td><%= user.subscription %></td>
       <td class="vert-align">
         <%= link_to "Edit", edit_receptionist_user_path(id: user.id), class: "btn btn-primary" %>

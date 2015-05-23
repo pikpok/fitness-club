@@ -27,7 +27,8 @@ class Admin::UsersControllerTest < ActionController::TestCase
         first_name: "Test",
         last_name: "Testowy",
         email: "test@test.test",
-        subscription: Date.today + 10.days,
+        telephone: "111222333",
+        subscription: "2015-10-20",
         password: "testowehaslo",
         password_confirmation: "testowehaslo"
       }

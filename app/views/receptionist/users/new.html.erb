@@ -16,6 +16,11 @@
   </div>
 
   <div class="field">
+    <%= f.label "Phone number" %><br />
+    <%= telephone_field(:user, :telephone) %>
+  </div>
+
+  <div class="field">
     <%= f.label :subscription %><br />
     <%= f.date_field :subscription, value: Date.today + 10.days %>
   </div>

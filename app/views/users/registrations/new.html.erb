@@ -19,6 +19,11 @@
   </div>
 
   <div class="field">
+    <%= f.label "Phone number" %><br />
+    <%= telephone_field(:user, :telephone) %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @validatable %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>

@@ -10,9 +10,9 @@ class User < ActiveRecord::Base
                   before: Date.new(2100, 12, 31),
                   message: "date is not valid" }
 
-  scope :first_name, -> (first_name) { where("first_name like ?", "%#{first_name}%") }
-  scope :last_name, -> (last_name) { where("last_name like ?", "%#{last_name}%") }
-  scope :email, -> (email) { where("email like ?", "%#{email}%") }
+  scope :first_name, -> (first_name) { where("lower(first_name) like ?", "%#{first_name.mb_chars.downcase.to_s}%") }
+  scope :last_name, -> (last_name) { where("lower(last_name) like ?", "%#{last_name.mb_chars.downcase.to_s}%") }
+  scope :email, -> (email) { where("lower(email) like ?", "%#{email.downcase}%") }
   
   def is_subscription_active?
     subscription >= Date.today

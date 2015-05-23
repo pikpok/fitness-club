@@ -40,6 +40,7 @@ class Admin::UsersControllerTest < ActionController::TestCase
     patch :update, id: @user.id, user: {
       first_name: "Test",
       last_name: "Testowy",
+      telephone: "111222333",
       email: "test@test.test",
       subscription: "2015-10-20"
     }

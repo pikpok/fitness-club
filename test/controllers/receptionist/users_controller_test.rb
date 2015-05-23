@@ -42,6 +42,7 @@ class Receptionist::UsersControllerTest < ActionController::TestCase
       first_name: "Test",
       last_name: "Testowy",
       email: "test@test.test",
+      telephone: "111222333",
       subscription: "2015-10-20"
     }
     assert_redirected_to receptionist_users_path, notice: "User updated."

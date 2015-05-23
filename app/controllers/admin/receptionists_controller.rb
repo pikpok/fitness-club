@@ -2,10 +2,6 @@ class Admin::ReceptionistsController < ApplicationController
     def index
       @receptionists = Receptionist.all
     end
-  
-    def show
-      @receptionist = Receptionist.find(params[:id])
-    end
 
     def new
       @receptionist = Receptionist.new

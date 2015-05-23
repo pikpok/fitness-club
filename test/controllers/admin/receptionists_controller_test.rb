@@ -33,6 +33,15 @@ class Admin::ReceptionistsControllerTest < ActionController::TestCase
     assert_redirected_to admin_receptionists_path, notice: "receptionist created"
   end
 
+  test "should not add invalid receptionist" do
+    post :create, receptionist: {
+      email: "test@test.test",
+      password: "testowehaslo",
+      password_confirmation: "testowehasloaleinne"
+    }
+    assert_redirected_to new_admin_receptionist_path
+  end
+
   test "should edit existing receptionist" do
     patch :update, id: @receptionist.id, receptionist: {
       email: "test@test.test",
@@ -41,6 +50,15 @@ class Admin::ReceptionistsControllerTest < ActionController::TestCase
     }
     assert_redirected_to admin_receptionists_path, notice: "receptionist updated."
   end
+
+  test "should not edit receptionist with wrong parameters" do
+    patch :update, id: @receptionist.id, receptionist: {
+      email: "test@test.test",
+      password: "testowehaslo",
+      password_confirmation: "testowehasloaleinne"
+    }
+    assert_redirected_to edit_admin_receptionist_path(id: @receptionist.id)
+  end    
 
   test "should destroy receptionist" do
     assert_difference('Receptionist.count', -1) do

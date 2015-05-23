@@ -19,6 +19,6 @@ class Receptionist::DashboardController < ApplicationController
 
   private
     def secure_params
-      params.require(:receptionist).permit(:email, :password, :password_confirmation, :current_password)
+      params.require(:receptionist).permit(:email, :password, :current_password)
     end
 end

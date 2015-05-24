@@ -19,4 +19,13 @@
 
 body {
   padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.field_with_errors {
+  @extend .has-error;
+}
+
+.navbar-text {
+    margin-left: 15px;
 }

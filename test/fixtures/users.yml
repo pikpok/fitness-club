@@ -8,12 +8,12 @@ one:
   email: "foo@b.ar"
   first_name: "test1"
   last_name: "test2"
+  subscription: <%= Date.tomorrow %>
   encrypted_password: <%= Devise.bcrypt(User, 'password') %>
-  #password: "foobar"
-  #password_confirmation: "foobar"
 
 two:
   email: "f@b.ar"
   first_name: "test3"
   last_name: "test4"
+  subscription: <%= Date.yesterday %>
   encrypted_password: <%= Devise.bcrypt(User, 'password') %>

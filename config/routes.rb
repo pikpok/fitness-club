@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   namespace :users do
     root 'dashboard#index'
     get 'dashboard/index'
+    resources :reservation
   end
 
   devise_for :admin

@@ -1,0 +1,41 @@
+<h3>Pool reservations</h3>
+<div>
+  <table class="table table-hover table-bordered">
+    <caption>Your reservations</caption>
+    <thead>
+      <th>
+        Start date
+      </th>
+      <th>
+        End date
+      </th>
+      <th>
+        Actions
+      </th>
+    </thead>
+    <tbody>
+      <% @reservations.each do |reservation| %>
+      <tr>
+        <td>
+          <%= reservation.start_time %>
+        </td>
+        <td>
+          <%= reservation.end_time %>
+        </td>
+        <td>
+          <%= link_to "Delete", users_reservation_path(id: reservation.id), class: "btn btn-primary", method: :delete %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <h3>New reservation</h3>
+  <%= simple_form_for @reservation, url: users_reservation_index_path, html: { class: "form-inline" }, method: :post do |f| %>
+    <%= f.input :start_time, as: :datetime_picker %>
+    <%= f.input :end_time, as: :datetime_picker %>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+</div>

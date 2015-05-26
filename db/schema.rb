@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523095640) do
+ActiveRecord::Schema.define(version: 20150525214835) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(version: 20150523095640) do
   end
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
+
+  create_table "pool_reservations", force: :cascade do |t|
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
 
   create_table "receptionists", force: :cascade do |t|
     t.string   "email",              default: "", null: false

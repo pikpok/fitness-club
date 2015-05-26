@@ -27,19 +27,26 @@ gem 'devise'
 # Twitter Bootstrap for Rails
 gem 'bootstrap-sass'
 
+# has_scope
 gem 'has_scope'
+
+# helps to validate dates
 gem 'date_validator'
 
+# helps to find overlapping dates
+gem 'validates_overlap'
+
+# coveralls.io gem to report code coverage
 gem 'coveralls', require: false
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# simple_form to easily integrate forms with Bootstrap
+gem 'simple_form'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+# datetime picker in style with bootstrap
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# moment.js needed by datetimepicker-rails
+gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
 
 group :development, :test do
   gem 'sqlite3'

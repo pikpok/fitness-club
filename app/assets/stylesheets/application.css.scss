@@ -129,8 +129,18 @@ body {
 
 // views/static_pages/cafe.html.erb
 
-#carousel-example-generic
-{
-  width: 600px;
-  height: 500px;
+.carousel .item {
+    width: 100%; /*slider width*/
+    max-height: 500px; /*slider height*/
+}
+
+.carousel .item img {
+    width: 100%; /*img width*/
+}
+
+@media (max-width: 767px) {
+    .block {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
 }

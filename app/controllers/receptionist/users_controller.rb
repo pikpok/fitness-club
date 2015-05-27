@@ -9,10 +9,6 @@ class Receptionist::UsersController < ApplicationController
     @users = apply_scopes(User).all.limit 100
   end
 	
-	def show
-		@user = User.find(params[:id])
-	end
-	
 	def new
 	  @user = User.new
 	end

@@ -22,5 +22,17 @@ class Admin::DashboardControllerTest < ActionController::TestCase
       current_password: "admin"
     }
     assert_redirected_to admin_root_path
+    assert_equal "Your data has been updated", flash[:notice]
+  end
+
+  test "should not change admin with invalid data" do
+    patch :update, admin: {
+      email: "admin@admin.admin",
+      password: "testtest",
+      password_confirmation: "testtest1",
+      current_password: "admin"
+    }
+    assert_redirected_to admin_edit_path
+    assert_equal "Password confirmation doesn't match Password", flash[:alert]
   end
 end

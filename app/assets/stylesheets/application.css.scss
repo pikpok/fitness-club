@@ -2,6 +2,7 @@
  *= require_tree .
  *= require_self
  *= require bootstrap-datetimepicker
+ *= require font-awesome
  */
 
 // we use Boostrap to provide us stylesheets and 
@@ -23,4 +24,105 @@ body {
 // fix for aligning text in navbar
 .navbar-text {
     margin-left: 15px;
+}
+
+// views/static_pages/home.html.erb
+.homecontainer
+{
+  padding: 20px;
+  text-align: center;
+  font-size: 36px;
+}
+
+#bluecontainer
+{
+  background-color:#23B094;
+  &:hover {
+    background-color: #f8f6d5;
+  }
+}
+
+// layouts/_footer.html.erb
+
+.footercontainer
+{
+  text-align: center;
+  padding: 20px;
+}
+
+// first row in _footer
+
+#footer
+{
+  padding-top: 30px;
+}
+
+#greencontainer
+{
+  background-color: #23B094;
+  &:hover {
+    background-color: #f8f6d5;
+  }
+}
+
+#graycontainer
+{
+  background-color: #23B094;
+  &:hover {
+    background-color: #f8f6d5;
+  }
+}
+
+#redcontainer
+{
+  background-color: #23B094;
+  &:hover {
+    background-color: #f8f6d5;
+  }
+}
+
+// second row in _footer
+
+#links-container
+{
+  padding-top: 30px;
+}
+
+#link
+{
+  padding: 15px;
+  background-color: #4668b3;
+  font-weight: bold;
+}
+
+#fb
+ {
+  background-color: #4668b3;
+  &:hover {
+    background-color: #3557a2;
+  }
+}
+
+#tw
+{
+  background-color: #3095d3;
+  &:hover {
+    background-color: #2084c2;  
+  }
+}
+
+#yt
+{
+  background-color: #d94348;
+  &:hover {
+    background-color: #c83237;
+  }
+} 
+
+#gp
+{
+  background-color: #d95333;
+  &:hover {
+    background-color: #c84222;
+  }
 }

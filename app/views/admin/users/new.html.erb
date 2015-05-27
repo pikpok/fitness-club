@@ -1,41 +1,18 @@
-<%= form_for [:admin, @user] do |f| %>
+<%= simple_form_for [:admin, @user] do |f| %>
 
-  <div class="field">
-    <%= f.label "First name"%><br />
-    <%= f.text_field :first_name, autofocus: true %>
+  <div class="form-inputs">
+    <%= f.input :first_name, required: true, autofocus: true %>
+    <%= f.input :last_name, required: true %>
+    <%= f.input :email, required: true %>
+    <%= f.input :telephone, required: true %>
+    <%= f.input :subscription, as: :date_picker, required: true %>
+    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+    <%= f.input :password_confirmation, required: false %>
   </div>
 
-  <div class="field">
-    <%= f.label "Last name"%><br />
-    <%= f.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Phone number" %><br />
-    <%= telephone_field(:user, :telephone) %>
-  </div>
-
-  <div class="field">
-    <%= f.label :subscription %><br />
-    <%= f.date_field :subscription, value: Date.today + 10.days %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Add new user" %>
+  <div class="form-actions">
+    <%= f.button :submit, "Add new user" %>
   </div>
 <% end %>
+</br>
+<%= link_to "Back", admin_users_path, class: "btn btn-default" %>

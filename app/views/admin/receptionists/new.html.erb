@@ -1,23 +1,14 @@
-<%= form_for [:admin, @receptionist] do |f| %>
+<%= simple_form_for [:admin, @receptionist] do |f| %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <div class="form-inputs">
+    <%= f.input :email, required: true %>
+    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+    <%= f.input :password_confirmation, required: false %>
   </div>
 
   <br>
 
-  <div class="actions">
-    <%= f.submit "Add new receptionist" %>
+  <div class="form-actions">
+    <%= f.button :submit, "Edit your data" %>
   </div>
 <% end %>

@@ -48,6 +48,9 @@ gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: '
 # moment.js needed by datetimepicker-rails
 gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
 
+# font awesome for icons
+gem "font-awesome-rails"
+
 group :development, :test do
   gem 'sqlite3'
 

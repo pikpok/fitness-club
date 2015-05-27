@@ -21,7 +21,7 @@ class Admin::DashboardController < ApplicationController
       sign_in(@admin, :bypass => true) # doesn't logout Admin when succesfully changed account
       redirect_to admin_root_path, notice: "Your data has been updated"
     else
-      redirect_to admin_root_path, alert: @admin.errors.full_messages.to_sentence
+      redirect_to admin_edit_path, alert: @admin.errors.full_messages.to_sentence
     end
   end
 

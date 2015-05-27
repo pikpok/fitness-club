@@ -21,18 +21,23 @@ class Receptionist::DashboardControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should change email" do
+    patch :update, receptionist: {
+      email: "receptionist@receptioni.st",
+      current_password: "receptionist"
+    }
+    assert_redirected_to receptionist_root_path
+    assert_equal "Your data has been updated", flash[:notice]
+  end
 
-  # test "should change password" do
-  #   sign_in receptionists(:one)
-  #   assert_difference('receptionists(:one).encrypted_password') do
-  #     patch :update, receptionist: {
-  #       email: receptionists(:one).email,
-  #       password: "testpassword",
-  #       password_confirmation: "testpassword",
-  #       current_password: "receptionist"
-  #     }
-  #   end
-  #   assert_redirected_to :index
-  # end
-
+  test "should not change receptionist with invalid data" do
+    patch :update, receptionist: {
+      email: "receptionist@receptioni.st",
+      password: "testtest",
+      password_confirmation: "testtest1",
+      current_password: "receptionist"
+    }
+    assert_redirected_to receptionist_edit_path
+    assert_equal "Password confirmation doesn't match Password", flash[:alert]
+  end
 end

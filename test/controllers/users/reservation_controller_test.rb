@@ -39,7 +39,7 @@ class Users::ReservationControllerTest < ActionController::TestCase
       }
     end
     assert_redirected_to users_reservation_index_path
-    assert_equal "Start time is wrong and End time is wrong", flash[:alert]
+    assert_equal "Start time must be at least 15 minutes from now and End time must be after start time", flash[:alert]
   end
 
   test "should delete reservation" do

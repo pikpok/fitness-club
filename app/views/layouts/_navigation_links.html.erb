@@ -1,3 +1,4 @@
+<li><%= link_to 'Schedule', schedule_index_path %></li>
 <% if admin_signed_in? %>
   <li><%= link_to 'Admin dashboard', admin_root_path %></li>
   <li><%= link_to 'Sign out (admin)', destroy_admin_session_path, :method=>'delete' %></li>

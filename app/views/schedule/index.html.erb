@@ -21,8 +21,8 @@
           <% if admin_signed_in? %>
             <%= link_to "Edit", edit_schedule_path(id: schedule_entry.id), class: "btn btn-sm btn-primary" %>
             <%= link_to "Remove", schedule_path(id: schedule_entry.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-primary" %>
-            <hr>
           <% end %>
+          <hr>
         <% end %>
       </td>
     <% end %>

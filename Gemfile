@@ -27,7 +27,7 @@ gem 'devise'
 # Twitter Bootstrap for Rails
 gem 'bootstrap-sass'
 
-# has_scope
+# has_scope for quick filtering via scope
 gem 'has_scope'
 
 # helps to validate dates

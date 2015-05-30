@@ -1,4 +1,4 @@
-<table class="table table-hover table-bordered">
+<table class="table table-bordered">
   <caption>Schedule</caption>
   <thead>
     <th>Monday</th>
@@ -17,7 +17,11 @@
           <b><%= schedule_entry.start_time.to_s(:time) %> - <%= schedule_entry.end_time.to_s(:time) %></b><br>
           <%= schedule_entry.title %><br>
           <%= schedule_entry.trainer %><br>
-          <br>
+          <%= schedule_entry.description %><br>
+          <% if admin_signed_in? %>
+            <%= link_to "Remove this entry", schedule_path(id: schedule_entry.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-primary" %>
+            <hr>
+          <% end %>
         <% end %>
       </td>
     <% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525214835) do
+ActiveRecord::Schema.define(version: 20150530135357) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email"
@@ -48,13 +48,24 @@ ActiveRecord::Schema.define(version: 20150525214835) do
   add_index "receptionists", ["email"], name: "index_receptionists_on_email", unique: true
   add_index "receptionists", ["unlock_token"], name: "index_receptionists_on_unlock_token", unique: true
 
+  create_table "schedule_entries", force: :cascade do |t|
+    t.string   "title"
+    t.string   "trainer"
+    t.text     "description"
+    t.integer  "weekday"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",           null: false
+    t.string   "encrypted_password",     default: "",           null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,            null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -64,7 +75,7 @@ ActiveRecord::Schema.define(version: 20150525214835) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "telephone"
-    t.date     "subscription"
+    t.date     "subscription",           default: '2015-05-30', null: false
     t.string   "skype_username"
     t.string   "facebook_username"
   end

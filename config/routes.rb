@@ -1,34 +1,29 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
-  get 'static_pages/help'
   get 'cafe', to: "static_pages#cafe"
 
-  resources :schedule
+  resources :schedule, except: :show
 
   namespace :receptionist do
     root 'dashboard#index'
     get 'edit', to: 'dashboard#edit'
     patch 'edit', to: 'dashboard#update'
-    resources :users do
-      collection do
-        patch 'update_password'
-      end
-    end
+    resources :users, except: :show
   end
 
   namespace :admin do
     root 'dashboard#index'
     get 'edit', to: 'dashboard#edit'
     patch 'edit', to: 'dashboard#update'
-    resources :receptionists
-    resources :users
+    resources :receptionists, except: :show
+    resources :users, except: :show
   end
 
   namespace :users do
     root 'dashboard#index'
     get 'dashboard/index'
-    resources :reservation
+    resources :reservation, except: :show
   end
 
   devise_for :admin

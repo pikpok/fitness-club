@@ -1,0 +1,30 @@
+<table class="table table-hover table-bordered">
+  <caption>Schedule</caption>
+  <thead>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+  </thead>
+  <tbody>
+    <tr>
+      <% @schedule_entries.each do |schedule_for_day| %>
+      <td>
+        <% schedule_for_day.each do |schedule_entry| %>
+          <b><%= schedule_entry.start_time.to_s(:time) %> - <%= schedule_entry.end_time.to_s(:time) %></b><br>
+          <%= schedule_entry.title %><br>
+          <%= schedule_entry.trainer %><br>
+          <br>
+        <% end %>
+      </td>
+    <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<% if admin_signed_in? %>
+  <%= link_to "Create new schedule entry", new_schedule_path, class: "btn btn-primary" %>
+<% end %>

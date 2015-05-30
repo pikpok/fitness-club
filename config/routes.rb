@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'static_pages/help'
   get 'cafe', to: "static_pages#cafe"
 
+  resources :schedule
+
   namespace :receptionist do
     root 'dashboard#index'
     get 'edit', to: 'dashboard#edit'

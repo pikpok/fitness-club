@@ -1,0 +1,9 @@
+<div>
+  <h3>Edit reservation</h3>
+  <%= simple_form_for @reservation, url: reservation_path(id: @reservation.id), method: :patch do |f| %>
+    <%= f.input :start_time, as: :datetime_picker %>
+    <%= f.input :end_time, as: :datetime_picker %>
+    <%= f.input :user_id %>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+</div>

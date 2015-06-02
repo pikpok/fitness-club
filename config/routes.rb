@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reservations
+
   root 'static_pages#home'
 
   get 'cafe', to: "static_pages#cafe"

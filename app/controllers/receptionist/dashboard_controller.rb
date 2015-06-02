@@ -1,12 +1,20 @@
 class Receptionist::DashboardController < ApplicationController
+  # make sure receptionist is logged in before accessing this class
   before_filter :authenticate_receptionist!
 
+  # Renders Receptionist dashboard page
+  # GET /receptionist/dashboard
   def index
   end
 
+  # Renders edit Receptionist page
+  # GET /receptionist/dashboard/edit
   def edit
   end
 
+  # Updates parameters of currently logged in Receptionist
+  # Also bypasses logging out after change of parameters
+  # PATCH /receptionist/dashboard/update
   def update
     @receptionist = current_receptionist
     if @receptionist.update_with_password(secure_params)
@@ -18,7 +26,9 @@ class Receptionist::DashboardController < ApplicationController
   end
 
   private
-    def secure_params
-      params.require(:receptionist).permit(:email, :password, :password_confirmation, :current_password)
-    end
+
+  # define parameters allowed to update for Receptionist
+  def secure_params
+    params.require(:receptionist).permit(:email, :password, :password_confirmation, :current_password)
+  end
 end

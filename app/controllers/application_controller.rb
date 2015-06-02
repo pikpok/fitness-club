@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
+  # Add some User parameters for Devise registration controller to be sanitized
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :first_name << :last_name << :telephone
     devise_parameter_sanitizer.for(:account_update) << :first_name << :last_name << :telephone

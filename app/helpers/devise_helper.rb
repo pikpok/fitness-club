@@ -1,4 +1,6 @@
 module DeviseHelper
+
+  # This helper converts Devise error messages for prettier look in Bootstrap
   def devise_error_messages!
     return '' if resource.errors.empty?
 

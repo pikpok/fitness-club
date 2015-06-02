@@ -1,5 +1,7 @@
 module ScheduleHelper
 
+  # Return table of weekdays and numbers corresponding to it,
+  # It helps to make view for new schedule cleaner.
   def weekdays
     [
       ['Monday', 1],

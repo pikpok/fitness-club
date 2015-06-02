@@ -2,16 +2,19 @@ class Admin::ReceptionistsController < ApplicationController
   # make sure that admin is always signed in before accessing ReceptionistsController
   before_filter :authenticate_admin!
 
+  # List all Receptionists
   # GET /admin/receptionists
   def index
     @receptionists = Receptionist.all
   end
 
+  # Renders page for creating new Receptionist
   # GET /admin/receptionists/new
   def new
     @receptionist = Receptionist.new
   end
   
+  # Creates new Receptionist, redirects to new Receptionist page if errors are found
   # POST /admin/receptionists/create
   def create
     @receptionist = Receptionist.new(secure_params)
@@ -22,11 +25,13 @@ class Admin::ReceptionistsController < ApplicationController
     end
   end
 
+  # Renders page for editing Receptionist
   # GET /admin/receptionists/{id}/edit
   def edit
     @receptionist = Receptionist.find(params[:id])
   end
   
+  # Updates Receptionist with provided id
   # PATCH /admin/receptionists/{id}
   def update
     @receptionist = Receptionist.find(params[:id])
@@ -37,6 +42,7 @@ class Admin::ReceptionistsController < ApplicationController
     end
   end
   
+  # Removes Receptionist with provided id
   # DELETE /admin/receptionists/{id}
   def destroy
     receptionist = Receptionist.find(params[:id])

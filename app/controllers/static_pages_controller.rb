@@ -1,10 +1,12 @@
 class StaticPagesController < ApplicationController
+
+  # Renders root page
+  # GET /
   def home
   end
 
-  def help
-  end
-
+  # Renders cafe page
+  # GET /cafe
   def cafe
   end
 end

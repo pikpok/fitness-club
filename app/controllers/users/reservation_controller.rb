@@ -1,15 +1,15 @@
 class Users::ReservationController < ApplicationController
   before_filter :authenticate_user!
 
+  # List all User's Pool Reservations and allow User to create new reservation
+  # GET /users/reservation/index
   def index
     @reservations = current_user.pool_reservations.all
     @reservation = current_user.pool_reservations.new
   end
 
-  def edit
-    @reservation = current_user.pool_reservations.find(params[:id])
-  end
-
+  # Creates a new Pool Reservation assigned to currently logged in User
+  # POST /users/reservation
   def create
     @reservation = current_user.pool_reservations.new(secure_params)
     if @reservation.save
@@ -19,6 +19,8 @@ class Users::ReservationController < ApplicationController
     end
   end
 
+  # Removes User's Pool Reservation with specific id
+  # DELETE /users/reservation/{id}
   def destroy
     @reservation = current_user.pool_reservations.find(params[:id])
     @reservation.destroy
@@ -26,6 +28,7 @@ class Users::ReservationController < ApplicationController
   end
 
   private
+  # Define parameters allowed for Pool Reservation
   def secure_params
     params.require(:pool_reservation).permit(:start_time, :end_time)
   end

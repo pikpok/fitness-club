@@ -2,10 +2,12 @@ class Admin::DashboardController < ApplicationController
   # make sure that admin is always signed in before accessing dashboard
   before_filter :authenticate_admin!
 
+  # Renders Admin dashboard
   # GET /admin/
   def index
   end
 
+  # Renders Admin edit page
   # GET /admin/edit
   def edit
   end

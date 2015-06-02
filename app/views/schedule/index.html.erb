@@ -17,7 +17,7 @@
           <b><%= schedule_entry.start_time.to_s(:time) %> - <%= schedule_entry.end_time.to_s(:time) %></b><br>
           <%= schedule_entry.title %><br>
           <%= schedule_entry.trainer %><br>
-          <%= schedule_entry.description %><br>
+          <i><%= schedule_entry.description %></i><br>
           <% if admin_signed_in? %>
             <%= link_to "Edit", edit_schedule_path(id: schedule_entry.id), class: "btn btn-sm btn-primary" %>
             <%= link_to "Remove", schedule_path(id: schedule_entry.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-primary" %>
